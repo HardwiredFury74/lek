@@ -1,0 +1,163 @@
+/* ============================================
+   style.css – Meine Reiseseite
+   Responsives Layout mit Media-Query unter 600px
+   ============================================ */
+
+/* Grundlayout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f4f7fb;
+}
+
+/* Kopfbereich mit Überschrift und Navigation */
+header {
+    background-color: #eaf1fb;
+    text-align: center;
+    padding: 24px 10px;
+    border-bottom: 3px solid #0052cc;
+}
+
+h1 {
+    color: #0052cc;
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+}
+
+/* Menü: auf großen Bildschirmen horizontal */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+    padding: 12px 18px;
+    color: white;
+    text-decoration: none;
+    background-color: #0052cc;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background-color: #003d99;
+}
+
+/* Hauptbereich */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #0052cc;
+    margin-bottom: 12px;
+}
+
+h3 {
+    margin: 12px 0 6px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* Responsive Bilder */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Reiseziel-Karten nebeneinander (Flexbox) */
+.karten {
+    display: flex;
+    gap: 20px;
+}
+
+.karte {
+    flex: 1;
+    background-color: #f9fbfe;
+    border: 1px solid #dbe6f5;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+/* Galerie-Bilder nebeneinander (Flexbox) */
+.galerie-bilder {
+    display: flex;
+    gap: 20px;
+}
+
+figure {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+}
+
+/* Fußbereich */
+footer {
+    background-color: #00356b;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+
+/* ============================================
+   Media-Query: Bildschirme mit höchstens 600px
+   ============================================ */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .karten {
+        flex-direction: column;
+    }
+
+    .galerie-bilder {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    section {
+        padding: 14px;
+    }
+}
